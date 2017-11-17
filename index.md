@@ -2,6 +2,9 @@
 layout: default
 ---
 
+# [](#header-1)[Identação Oracle SQLDeveloper](identacao-sqldeveloper)
+Identação é fundamental. Não é somente a visualização que fica comprometida, mas também, questão de organização...
+
 # [](#header-1)[SpringBoot+Orika](erro-javassist)
 Ao trabalhar com microserviços, é desejável ter um modelo de mapeamento entidade-vo e vice-versa...
 
