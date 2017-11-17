@@ -3,14 +3,20 @@ layout: default
 ---
 
 
-# [](#header-1)Usando setResultTransform do Hibernate
-Quando usamos consultas nativas, NativeQuery, podemos converter o resultado para um bean. Contudo, ele irá pedir que os campos sejam todos em maiúsculo. 
-Para resolver isso, é simples, basta fazer o seguinte:
+# [](#header-1)Android Studio com atalho do Eclipse
+Olá Pessoal,
 
-```java
-   SQLQuery query = session.createSQLQuery(hql.toString());
-   query.setResultTransformer(Transformers.aliasToBean(NomeVO.class));
-   query.addScalar("nomeCampo").addScalar("nomeCampo");
-```
+Para o desenvolvimento de aplicativos Android opto sempre por usar o Android Studio, por vários motivos, não irei no mérito de qual IDE é melhor. Ao meu entender, a melhor IDE é a que você mais se adapta, simples assim.
 
+Contudo, o Eclipse é uma ferramenta que uso diariamente, então, senti algumas dificuldades em entender os atalhos originais do Android Studio. Assim, seria possível usar o Android Studio, com os atalhos do Eclipse?
+
+Sim!! Segue abaixo como isso é possível:
+
+1.	Acesse o menu File
+2.	Em seguida, Settings
+3.	Encontre a opção Keymap
+4.	Na combo que surgir, maque a opção Eclipse
+Pronto, agora pode usar seu Android Studio, com atalhos do Eclipse.
+
+Abraços.
 

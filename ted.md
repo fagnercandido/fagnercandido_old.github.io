@@ -3,14 +3,14 @@ layout: default
 ---
 
 
-# [](#header-1)Usando setResultTransform do Hibernate
-Quando usamos consultas nativas, NativeQuery, podemos converter o resultado para um bean. Contudo, ele irá pedir que os campos sejam todos em maiúsculo. 
-Para resolver isso, é simples, basta fazer o seguinte:
+# [](#header-1)TED - Disseminando ideias
 
-```java
-   SQLQuery query = session.createSQLQuery(hql.toString());
-   query.setResultTransformer(Transformers.aliasToBean(NomeVO.class));
-   query.addScalar("nomeCampo").addScalar("nomeCampo");
-```
+Olá Pessoal,
 
+O post de hoje é para falar do TED (Technology, Entertainment, Design). O TED é uma série de conferências, onde os palestrantes expõem alguma ideia. Contudo, são ideias que valem a pena serem espalhadas e disseminadas.
 
+É importante ressaltar que o TED está presente em quase todos os continentes. O conteúdo das palestras também é legendado para vários idiomas, há aplicativos para serem assistidos no celular, até mesmo no NetFlix é possível encontrar vídeos do TED.
+
+Se estiver interessado em algo desafiador e ao mesmo tempo motivador, assista à alguma palestra do TED.
+
+Até a próxima!

@@ -3,14 +3,51 @@ layout: default
 ---
 
 
-# [](#header-1)Usando setResultTransform do Hibernate
-Quando usamos consultas nativas, NativeQuery, podemos converter o resultado para um bean. Contudo, ele irá pedir que os campos sejam todos em maiúsculo. 
-Para resolver isso, é simples, basta fazer o seguinte:
+# [](#header-1)Leitura de String - C/C++
 
-```java
-   SQLQuery query = session.createSQLQuery(hql.toString());
-   query.setResultTransformer(Transformers.aliasToBean(NomeVO.class));
-   query.addScalar("nomeCampo").addScalar("nomeCampo");
+Sempre que precisamos ler uma string via teclado é uma dificuldade. O código que disponibilizo tenta sanar este inconveniente.
+
+Por alocação dinâmica, ele vai realocando caracter por caracter para compor a string.
+
+```c++
+/*
+ Sintese
+   Objetivo: Ler uma String
+  
+   Entrada : uma String.
+ 
+   Saida   : A String
+ 
+   Data : 30/01/2008
+*/
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+   char fraseInicial;
+   char *fraseFinal;
+   int contadorLaco=0, contadorAlocacao = 2;
+   if((fraseFinal = (char *)malloc(contadorAlocacao*sizeof(char *))) == NULL)
+   {
+      printf("ERRO NA ALOCACAO!");
+      getchar();
+      exit(1);
+   }
+   printf("Digite o Nome: ");
+   fraseInicial=getchar();
+   /* Dentro do laço é feita a leitura caracter a caracter
+        e à realocação, para não haver desperdício de espaço.
+   */
+   while(fraseInicial!='\n')
+   {
+      fraseFinal[contadorLaco]=fraseInicial;
+      contadorLaco++;
+      contadorAlocacao++;
+           fraseFinal = realloc(fraseFinal, contadorAlocacao*sizeof(char));
+      fraseInicial=getchar();
+   }
+   fraseFinal[contadorLaco]='{FONTE}';
+   printf(fraseFinal);
+}
+
 ```
-
-

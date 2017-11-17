@@ -3,14 +3,16 @@ layout: default
 ---
 
 
-# [](#header-1)Usando setResultTransform do Hibernate
-Quando usamos consultas nativas, NativeQuery, podemos converter o resultado para um bean. Contudo, ele irá pedir que os campos sejam todos em maiúsculo. 
-Para resolver isso, é simples, basta fazer o seguinte:
+# [](#header-1)Acentuação Oracle
+Olá PessoALL,
 
-```java
-   SQLQuery query = session.createSQLQuery(hql.toString());
-   query.setResultTransformer(Transformers.aliasToBean(NomeVO.class));
-   query.addScalar("nomeCampo").addScalar("nomeCampo");
-```
+Recentemente enfrentamos um problema em produção bem singular: Ao salvar um dado no banco de dados, o mesmo não era inserido, erro, por excesso de caracteres.
 
+Contudo, ao contar quantos caracteres existiam na sequência, era perfeitamente cabível. Até quê… Os acentos.
+
+Ah, os acentos… Eles adicionam caracteres a mais no dado a ser salvo. Essa situação foi verificada no Oracle, sobre os outros SGBD’s não posso afirmar nada.
+
+Solução: Simples, aumentamos o tamanho dos campos em suas tabelas.
+
+Até mais e obrigado pela atenção
 

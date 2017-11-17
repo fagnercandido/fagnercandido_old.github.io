@@ -3,14 +3,20 @@ layout: default
 ---
 
 
-# [](#header-1)Usando setResultTransform do Hibernate
-Quando usamos consultas nativas, NativeQuery, podemos converter o resultado para um bean. Contudo, ele irá pedir que os campos sejam todos em maiúsculo. 
-Para resolver isso, é simples, basta fazer o seguinte:
+# [](#header-1)Gerando MER no Oracle SQLDeveloper
 
-```java
-   SQLQuery query = session.createSQLQuery(hql.toString());
-   query.setResultTransformer(Transformers.aliasToBean(NomeVO.class));
-   query.addScalar("nomeCampo").addScalar("nomeCampo");
-```
+lá Pessoal,
 
+Recentemente precisei gerar um modelo MER. A única ferramenta que havia em mãos era o Oracle SQL Developer.
 
+E para minha surpresa, é mais fácil do que se imagina. Seguem os passos:
+
+1.	Selecione o menu Arquivo
+2.	Selecione a opção Data Modeler
+3.	Em seguida, selecione Import
+4.	Após isso, selecione Data Dictionary
+5.	Agora, informe o Database.
+6.	Agora, vem um passo a passo bem simples, onde podem ser escolhidas as tabelas a serem gerados.
+Pronto, simples não?
+
+Qualquer dúvida, problema ou crítica, é só postar.
