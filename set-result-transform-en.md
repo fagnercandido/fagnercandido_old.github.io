@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-# [](#header-1)Usando setResultTransform do Hibernate
+# [](#header-1)Using setResultTransform of Hibernate
 When using native queries, NativeQuery, we can convert the result to a bean. However, he will ask that the fields be all in magnitude. 
 To solve this, it's simple, just do the following:
 

@@ -67,7 +67,8 @@ A sua carreira profissional é responsabilidade sua, certo?! E que tal tratar su
 # [](#header-1)[Movendo bandas DETAIL no IReport](detail-ireport)
 Recentemente tive que realizar manutenções em relatórios Jasper, com a ferramenta IReport...
 
-
+# [](#header-1)[Using setResultTransform of Hibernate](set-result-transform-en)
+When using native queries, NativeQuery, we can convert the result to a bean...
 
 # [](#header-1)[Usando setResultTransform do Hibernate](set-result-transform)
 Quando usamos consultas nativas, NativeQuery, podemos converter o resultado para um bean. Contudo, ele irá pedir que os campos sejam todos em maiúsculo. 
